@@ -1,6 +1,6 @@
 --[[
 
-=====================================================================
+b s====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
 ========                                    .-----.          ========
@@ -197,6 +197,8 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set('n', 'ss', ':split<Return>')
+vim.keymap.set('n', 'sv', ':vsplit<Return>')
 -- See `:help nvim-tree` for a list of all nvim tree commands
 vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', { desc = 'Toggle Explorer [T]ree' })
 
