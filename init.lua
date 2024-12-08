@@ -104,6 +104,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Make line numbers default
 vim.opt.number = true
+
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
@@ -164,6 +165,10 @@ vim.opt.scrolloff = 10
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 
+-- Setting default tab/spaces
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+
 -- enable 24-bit colour
 vim.opt.termguicolors = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -199,6 +204,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', 'ss', ':split<Return>')
 vim.keymap.set('n', 'sv', ':vsplit<Return>')
+-- See `:help nvim-tree` for a list of all nvim tree commands
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
