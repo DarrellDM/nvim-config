@@ -199,8 +199,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', 'ss', ':split<Return>')
 vim.keymap.set('n', 'sv', ':vsplit<Return>')
--- See `:help nvim-tree` for a list of all nvim tree commands
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', { desc = 'Toggle Explorer [T]ree' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -323,7 +321,10 @@ require('lazy').setup({
   { -- File Explorer
     'nvim-tree/nvim-tree.lua',
     config = function()
-      require('nvim-tree').setup()
+      local api = require 'nvim-tree.api'
+      require('nvim-tree').setup {
+        vim.keymap.set('n', '<leader>t', api.tree.toggle, { desc = 'Toggle Explorer [T]ree' }),
+      }
     end,
   },
 
